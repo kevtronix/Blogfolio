@@ -1,12 +1,16 @@
+import HomePage from './HomePage';
+import Navigation from './Navigation';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Navigation />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          <HomePage />
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
