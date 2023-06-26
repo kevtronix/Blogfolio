@@ -2,33 +2,52 @@
 
 import { AppBar } from "@mui/material";
 import { Toolbar } from "@mui/material";
-import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
-import { IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+
+import { useNavigate } from "react-router-dom";
 
 
 
 // creates a fully functional navigation bar that is dynamic
 function Navigation() {
+    const navigate = useNavigate();
+
     return (
-        <AppBar position="static">
-            <Toolbar>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="menu"
-                    sx={{ mr: 2 }}
-                >    
-                </IconButton>
-                <MenuIcon />
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    News
-                </Typography>
-                <Button color="inherit">Login</Button>
-            </Toolbar>
-        </AppBar>
+        <div> 
+            <AppBar position="static">
+                <Toolbar>
+                    {/* }
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="menu"
+                        sx={{ mr: 2 }}
+                    >    
+                    </IconButton>
+                    <MenuIcon />
+                    { */}  
+                    <Button 
+                        color="inherit"
+                        onClick={() => navigate("/")} 
+                    >
+                        Home
+                    </Button>
+                    <Button 
+                        color="inherit"
+                        onClick={() => navigate("/about")}   
+                    >
+                        About
+                    </Button>
+                    <Button 
+                        color="inherit"
+                        onClick={() => navigate("/projects")} 
+                    >
+                        Projects
+                    </Button> 
+                </Toolbar>
+            </AppBar>
+        </div>
     )
 }
 

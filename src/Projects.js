@@ -1,13 +1,14 @@
-// Purpose: Home page component for the application.
+// Purpose: Projects page component for the application. 
 import './Utilities.css';
 import { Construction } from "@mui/icons-material";
-function HomePage() {
+
+function Projects() {
     return (
-        <div> 
+        <div>
             <Construction style={ {fontSize: 500}} className="center-item"/>
             <p>Work in progress. Please check back later.</p>
-        </div> 
+        </div>  
     )
 }
 
-export default HomePage;
+export default Projects;
