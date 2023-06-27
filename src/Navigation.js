@@ -14,7 +14,7 @@ function Navigation() {
 
     return (
         <div> 
-            <AppBar position="static">
+            <AppBar position="static" color="primary">
                 <Toolbar>
                     {/* }
                     <IconButton
