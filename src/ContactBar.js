@@ -18,8 +18,8 @@ function ContactBar() {
         <Box 
             display="flex" 
             justifyContent="center" 
-            alignContent="center" 
-            pt={8}
+            alignContent="center"
+            paddingTop={2}
         > 
             <Toolbar>
                 <IconButton
