@@ -12,13 +12,11 @@ function App() {
   return (
     <div className="App"> 
       <Navigation /> 
-      <Box pt={8} paddingX={8}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
         </Routes> 
-      </Box> 
     </div>
   );
 }

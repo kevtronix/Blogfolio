@@ -15,12 +15,11 @@ import EmailIcon from '@mui/icons-material/Email';
 // creates a fully functional navigation bar that is dynamic
 function ContactBar() {
     return (
-        <Box 
-            display="flex" 
-            justifyContent="center" 
+        <Box
+            display="flex"
+            justifyContent="center"
             alignContent="center"
-            paddingTop={2}
-        > 
+        >
             <Toolbar>
                 <IconButton
                     size="large"
@@ -28,9 +27,9 @@ function ContactBar() {
                     color="inherit"
                     aria-label="Github"
                     sx={{ mr: 2 }}
-                > 
-                    <GitHub />   
-                </IconButton> 
+                >
+                    <GitHub />
+                </IconButton>
                 <IconButton
                     size="large"
                     edge="start"
@@ -38,8 +37,8 @@ function ContactBar() {
                     aria-label="LinkedIn"
                     sx={{ mr: 2 }}
                 >
-                    <LinkedIn />         
-                </IconButton> 
+                    <LinkedIn />
+                </IconButton>
                 <IconButton
                     size="large"
                     edge="start"
@@ -47,8 +46,8 @@ function ContactBar() {
                     aria-label="Instagram"
                     sx={{ mr: 2 }}
                 >
-                    <Instagram />         
-                </IconButton> 
+                    <Instagram />
+                </IconButton>
                 <IconButton
                     size="large"
                     edge="start"
@@ -57,7 +56,7 @@ function ContactBar() {
                     sx={{ mr: 2 }}
                 >
                     <NoteIcon />
-                </IconButton> 
+                </IconButton>
                 <IconButton
                     size="large"
                     edge="start"
@@ -66,7 +65,7 @@ function ContactBar() {
                     sx={{ mr: 2 }}
                 >
                     <EmailIcon />
-                </IconButton> 
+                </IconButton>
             </Toolbar>
         </Box>
     )

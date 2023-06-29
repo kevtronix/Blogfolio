@@ -21,3 +21,17 @@
     border-radius: 50%;
     opacity: 0.8;
 }
+
+.home-page {
+    background-image: url("./images/pixel_art_home_background.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-page {
+    background-image: url("./images/pixel_art_about_background.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -7,7 +7,11 @@ import Box from '@mui/material/Box';
 
 function About() {
     return (
-        <div>
+        <Box
+            paddingTop={8}
+            paddingX={8} 
+            className='about-page'
+        >
             <div>
                 <Card>
                     <Box
@@ -66,12 +70,9 @@ function About() {
                         </Typography>
                     </CardContent>
                 </Card>
-                <ContactBar />
-            </div>
-            <div>
-
-            </div>
-        </div>
+                <ContactBar/>
+            </div> 
+        </Box>
     )
 }
 
