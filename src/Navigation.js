@@ -1,20 +1,26 @@
 // Desc: This is the top navigation bar for the application
 
-import { AppBar } from "@mui/material";
+import { AppBar, Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Button } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "@mui/material";
 
 
 
 // creates a fully functional navigation bar that is dynamic
 function Navigation() {
     const navigate = useNavigate();
+    const theme = useTheme();
 
     return (
-        <div> 
-            <AppBar position="static" color="primary">
+        <div>
+            <AppBar
+                position="static"
+                style={{
+                    backgroundColor: theme.palette.primary.darker
+                }}>
                 <Toolbar>
                     {/* }
                     <IconButton
@@ -26,25 +32,31 @@ function Navigation() {
                     >    
                     </IconButton>
                     <MenuIcon />
-                    { */}  
-                    <Button 
+                    { */}
+                    <Button
                         color="inherit"
-                        onClick={() => navigate("/")} 
+                        onClick={() => navigate("/")}
                     >
-                        Home
+                        <Typography variant="h6">
+                            Home
+                        </Typography>
                     </Button>
-                    <Button 
+                    <Button
                         color="inherit"
-                        onClick={() => navigate("/about")}   
+                        onClick={() => navigate("/about")}
                     >
-                        About
+                        <Typography variant="h6">
+                            About
+                        </Typography>
                     </Button>
-                    <Button 
+                    <Button
                         color="inherit"
-                        onClick={() => navigate("/projects")} 
+                        onClick={() => navigate("/projects")}
                     >
-                        Projects
-                    </Button> 
+                        <Typography variant="h6">
+                            Projects
+                        </Typography>
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>

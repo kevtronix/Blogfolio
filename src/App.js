@@ -8,10 +8,11 @@ import './Utilities.css';
 import { Route, Routes } from "react-router-dom";
 import Box from '@mui/material/Box';
 
+
 function App() {
   return (
     <div className="App"> 
-      <Navigation /> 
+        <Navigation/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />

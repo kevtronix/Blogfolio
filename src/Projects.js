@@ -85,8 +85,7 @@ function Projects() {
                                 <Grid item xs={6}>
 
                                     <Typography
-                                        variant="h7"
-                                        color={"primary"}
+                                        variant="h6"
                                     >
                                         Progress
                                     </Typography>
