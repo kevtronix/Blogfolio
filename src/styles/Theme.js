@@ -1,11 +1,8 @@
+import { BorderColor } from '@mui/icons-material';
 import './fonts.css'
 
 import { createTheme } from '@mui/material/styles'
 import { darken } from '@mui/system'
-
-const customColors = {
-    black: '#000000',
-};
 
 const draculaTheme = createTheme({
     palette: {
@@ -16,12 +13,8 @@ const draculaTheme = createTheme({
         secondary: {
             main: darken('#ff79c6', 0.5),
         },
-        tertiary: {
-            main: darken('#bd93f9', 0.8)
-
-        }
     },
-    error : {
+    error: {
         main: darken('#ff5555', 0.5)
     },
     warning: {
@@ -44,13 +37,24 @@ const draculaTheme = createTheme({
         secondary: '#f8f8f2',
         disabled: '#6272a4',
         hint: '#6272a4',
-
     },
     typography: {
         fontFamily: [
             'Pixel',
         ]
-    },    
+    },
+    components: {
+        MuiCard: {
+            styleOverrides: {
+                root: {
+                    border: '3px solid #ffff',
+                    boxSizing: 'border-box',
+                    boxShadow: 'inset 0 0 0 3px #000',
+                    borderRadius: 14,
+                }
+            }
+        }
+    }
 });
 
 export default draculaTheme;

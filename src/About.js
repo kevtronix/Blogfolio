@@ -9,11 +9,12 @@ function About() {
     return (
         <Box
             paddingTop={8}
-            paddingX={8} 
+            paddingX={8}
             className='about-page'
         >
             <div>
-                <Card>
+                <Card
+                >
                     <Box
                         display={"flex"}
                         justifyContent={"center"}
@@ -70,8 +71,8 @@ function About() {
                         </Typography>
                     </CardContent>
                 </Card>
-                <ContactBar/>
-            </div> 
+                <ContactBar />
+            </div>
         </Box>
     )
 }

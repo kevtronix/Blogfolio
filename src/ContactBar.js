@@ -9,65 +9,76 @@ import { LinkedIn } from "@mui/icons-material";
 import { Instagram } from "@mui/icons-material";
 import NoteIcon from '@mui/icons-material/Note';
 import EmailIcon from '@mui/icons-material/Email';
+import { AppBar } from "@mui/material";
+import Card from '@mui/material/Card';
 
 
 
 // creates a fully functional navigation bar that is dynamic
 function ContactBar() {
     return (
-        <Box
-            display="flex"
-            justifyContent="center"
-            alignContent="center"
+        <AppBar 
+            position="static"
+            color="transparent"
+        
         >
-            <Toolbar>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="Github"
-                    sx={{ mr: 2 }}
-                >
-                    <GitHub />
-                </IconButton>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="LinkedIn"
-                    sx={{ mr: 2 }}
-                >
-                    <LinkedIn />
-                </IconButton>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="Instagram"
-                    sx={{ mr: 2 }}
-                >
-                    <Instagram />
-                </IconButton>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="Resume"
-                    sx={{ mr: 2 }}
-                >
-                    <NoteIcon />
-                </IconButton>
-                <IconButton
-                    size="large"
-                    edge="start"
-                    color="inherit"
-                    aria-label="Email"
-                    sx={{ mr: 2 }}
-                >
-                    <EmailIcon />
-                </IconButton>
-            </Toolbar>
-        </Box>
+            <Box
+                display="flex"
+                justifyContent="center"
+                alignContent="center"
+                paddingY={4}
+            >
+                <Card>
+                <Toolbar>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="Github"
+                        sx={{ mr: 2 }}
+                    >
+                        <GitHub />
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="LinkedIn"
+                        sx={{ mr: 2 }}
+                    >
+                        <LinkedIn />
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="Instagram"
+                        sx={{ mr: 2 }}
+                    >
+                        <Instagram />
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="Resume"
+                        sx={{ mr: 2 }}
+                    >
+                        <NoteIcon />
+                    </IconButton>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="Email"
+                        sx={{ mr: 2 }}
+                    >
+                        <EmailIcon />
+                    </IconButton>
+                </Toolbar>
+                </Card>
+            </Box>
+        </AppBar>
     )
 }
 
