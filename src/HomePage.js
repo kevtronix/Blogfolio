@@ -10,6 +10,7 @@ function HomePage() {
         <Box
             display={"flex"}
             justifyContent={"center"}
+            alignItems={"center"}
             className='home-page'
             sx={{
                 height: "100vh",
@@ -21,51 +22,32 @@ function HomePage() {
                 spacing={5}
                 justifyContent={"center"}
                 paddingX={"20%"}
-                paddingY={"20%"}
-
             >
                 <Grid
                     item xs={12}
-                    paddingBottom={3}
                 >
                     <Card>
                         <CardContent>
-                            <Typography variant="h2">
-                                Welcome to my website!
+                            <Typography variant="h2" color={"primary"}>
+                                Welcome to Kevin's Digital Realm
+                            </Typography>
+                            <Typography variant="h4" color={"secondary"}>
+                                Where Technology Meets Creativity
                             </Typography>
                         </CardContent>
                     </Card>
                 </Grid>
                 <Grid
-                    item xs={6}
+                    item xs={12}
                 >
                     <Card>
                         <CardContent>
                             <Typography variant="h4">
-                                Magna qui ea sint ex est ipsum exercitation 
-                                Lorem. Incididunt consequat adipisicing quis 
-                                laborum ea culpa ad reprehenderit consectetur 
-                                non veniam. Aliquip incididunt magna eu 
-                                cupidatat ea. Tempor qui adipisicing ad 
-                                officia. Enim irure do sit culpa eiusmod duis 
-                                incididunt irure nostrud tempor nisi ad.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-                <Grid
-                    item xs={6}
-                >
-                    <Card>
-                        <CardContent>
-                            <Typography variant="h4">
-                                Magna qui ea sint ex est ipsum exercitation 
-                                Lorem. Incididunt consequat adipisicing quis 
-                                laborum ea culpa ad reprehenderit consectetur 
-                                non veniam. Aliquip incididunt magna eu 
-                                cupidatat ea. Tempor qui adipisicing ad 
-                                officia. Enim irure do sit culpa eiusmod duis 
-                                incididunt irure nostrud tempor nisi ad.
+                            Welcome! Step into the digital realm of a spirited student, 
+                            an eager teacher, and a software engineer in the making. 
+                            Here, I share my quests in AI and full-stack development. 
+                            Join me on this exciting journey through the landscape 
+                            of technology!
                             </Typography>
                         </CardContent>
                     </Card>

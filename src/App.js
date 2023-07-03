@@ -6,7 +6,6 @@ import './App.css';
 import './Utilities.css';
 
 import { Route, Routes } from "react-router-dom";
-import Box from '@mui/material/Box';
 
 
 function App() {

@@ -59,8 +59,8 @@ List of features ready and TODOs for future development
 * Accessible navigation
 * Theming set 
 * Skeleton for server outputs. 
+* Content Modification: Welcome page and About page edited 
 * TODO:
-    * Content Modification: Update the content on the Welcome page and About page to ensure they are accurate and engaging.
     * Server Deployment: Deploy the website on a server to make it accessible to the public.
     * Blog functionality 
     * Image showcase

@@ -1,11 +1,3 @@
-.center-item {
-    display: 'flex';
-    justifyContent: 'center';
-    alignItems: 'center';
-    height: '100vh'
-}
-
-
 .set-bg-image {
     background-image: url('./images/gaming_background.png');
     background-repeat: no-repeat;
@@ -19,7 +11,7 @@
 
 .profile-image { 
     border-radius: 50%;
-    opacity: 0.8;
+    border: 4px solid #000;
 }
 
 .home-page {
