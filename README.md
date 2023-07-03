@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Kevin's Personal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code for my personal website, built with React.
 
-## Available Scripts
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Setup](#setup)
+4. [Features](#features)
+5. [Status](#status)
+6. [Contact](#contact)
 
-In the project directory, you can run:
+## General Info
+This website serves multiple purposes:
 
-### `npm start`
+1. It is a digital portfolio where I highlight the projects I've completed or worked on, providing a comprehensive view of my skills and experiences in the software engineering realm.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. It functions as a blog where I share my learning journey, discuss intriguing topics I encounter, and delve into various aspects of AI and beyond.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. It acts as a gallery for displaying images and other unique content I've created using AI.  
 
-### `npm test`
+In addition to these, the website offers a glimpse into my world beyond coding, featuring my hobbies, interests, and projects outside of software engineering. This eclectic mix of features ensures that the site is not just a professional platform, but also a personal space that reflects my passions and pursuits.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
+The project is created with:
+* React.js version: ^18.2.0
+* Node.js version: v20.3.1 
+* React-DOM version: 18.2.0 
+* @emotion/react version: 11.11.1 and @emotion/styled version: 11.11.0 for CSS-in-JS styling
+* @mui/material version: 5.13.5 and @mui/icons-material version: 5.11.16 for Material UI components
+* React Router DOM version: 6.13.0 for routing and navigation within the application
 
-### `npm run build`
+## Setup
+To run this project, you will need to install [node and npm](https://nodejs.org/en/download/) if not already installed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/[your-github-username]/[your-repo-name].git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install the dependencies:
 
-### `npm run eject`
+```bash
+cd [your-repo-name]
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The site should now be accessible at [http://localhost:3000](http://localhost:3000).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Features
+List of features ready and TODOs for future development
+* Accessible navigation
+* Theming set 
+* Skeleton for server outputs. 
+* TODO:
+    * Content Modification: Update the content on the Welcome page and About page to ensure they are accurate and engaging.
+    * Server Deployment: Deploy the website on a server to make it accessible to the public.
+    * Blog functionality 
+    * Image showcase
+    * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
+    * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
+    * Testing and CI/CD: Implement tests for the application's features and integrate with GitHub Actions for continuous integration and deployment.
 
-## Learn More
+## Status
+Project is: _in progress_ 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
