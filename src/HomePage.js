@@ -13,7 +13,7 @@ function HomePage() {
             className='home-page'
             sx={{
                 height: "100vh",
-                width: "100%"
+                width: "100%",
             }}
         >
             <Grid
