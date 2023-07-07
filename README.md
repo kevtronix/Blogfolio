@@ -60,13 +60,16 @@ List of features ready and TODOs for future development
 * Theming set 
 * Skeleton for server outputs. 
 * Content Modification: Welcome page and About page edited 
+* Deployed Website to self hosted server
 * TODO:
-    * Server Deployment: Deploy the website on a server to make it accessible to the public.
+    * CI/CD: Integrate with Github actions and make sure that each commit can 
+    directly go towards updating the server 
+    * Fix viewing issue with the homepage and projects page (grid)
     * Blog functionality 
     * Image showcase
     * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
-    * Testing and CI/CD: Implement tests for the application's features and integrate with GitHub Actions for continuous integration and deployment.
+    * Implement tests in order to ensure 
 
 ## Status
 Project is: _in progress_ 

@@ -1,0 +1,38 @@
+# Set up a workflow to build and deploy my react app to an ubuntu server (self hosted) 
+# using github actions
+
+
+name: Build and Deploy
+
+on: 
+    push:
+        branches:
+            - main
+
+jobs: 
+    build: 
+        runs-on: ubuntu-latest
+
+        steps: 
+            # Checkout the repo
+            - name: Checkout Repo
+              uses: actions/checkout@v2
+
+            # Build the project
+            - name: Build Project
+              run: | 
+                echo "Building Project"
+                npm install 
+                npm run build 
+
+            # Deploy to server
+            - name: Deploy to Server
+              uses: appleboy/scp-action@v0.1.4
+              with: 
+                    host: ${{ secrets.HOST }}
+                    username: ${{ secrets.USERNAME }}
+                    key: ${{ secrets.KEY }}
+                    port: ${{ secrets.PORT }}
+                    source: "build"
+                    target: "/var/www/personal_project_frontend/"
+

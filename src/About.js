@@ -126,12 +126,12 @@ function About() {
                     </Card>
 
                 </Grid>
-                <Grid 
-                    item 
+                <Grid
+                    item
                     xs={12}
                     paddingTop={3}
                     paddingX={"15%"}
-                
+
                 >
                     <Card>
                         <CardContent>
