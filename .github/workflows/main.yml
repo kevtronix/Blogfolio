@@ -32,7 +32,8 @@ jobs:
                     host: ${{ secrets.HOST }}
                     username: ${{ secrets.USERNAME }}
                     key: ${{ secrets.KEY }}
+                    passphrase: ${{ secrets.PASSPHRASE }}}
                     port: ${{ secrets.PORT }}
                     source: "build"
-                    target: "/var/www/personal_project_frontend/"
+                    target: "/home/deploy/"
 
