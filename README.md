@@ -8,7 +8,6 @@ This repository contains the code for my personal website, built with React.
 3. [Setup](#setup)
 4. [Features](#features)
 5. [Status](#status)
-6. [Contact](#contact)
 
 ## General Info
 This website serves multiple purposes:
@@ -36,13 +35,13 @@ To run this project, you will need to install [node and npm](https://nodejs.org/
 Clone the repository:
 
 ```bash
-git clone https://github.com/[your-github-username]/[your-repo-name].git
+git clone https://github.com/kevtronix/personal_website_frontend.git
 ```
 
 Install the dependencies:
 
 ```bash
-cd [your-repo-name]
+cd  personal_website_frontend
 npm install
 ```
 
@@ -61,15 +60,18 @@ List of features ready and TODOs for future development
 * Skeleton for server outputs. 
 * Content Modification: Welcome page and About page edited 
 * Deployed Website to self hosted server
+* CI/CD: Integrate with Github actions and make sure that each commit can 
+directly go towards updating the server 
+* Fix viewing issue with the homepage and projects page (grid)
+* Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
+
 * TODO:
-    * CI/CD: Integrate with Github actions and make sure that each commit can 
-    directly go towards updating the server 
-    * Fix viewing issue with the homepage and projects page (grid)
+    * Host the project on Google Cloud while server is being set up 
     * Blog functionality 
-    * Image showcase
-    * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
+    * Image showcase 
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
     * Implement tests in order to ensure 
+
 
 ## Status
 Project is: _in progress_ 

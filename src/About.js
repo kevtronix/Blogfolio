@@ -22,7 +22,7 @@ function About() {
                 <Grid
                     item
                     xs={12}
-                    paddingX={"25%"}
+                    paddingX={"10%"}
                 >
                     <Card>
                         <CardContent>
@@ -34,9 +34,9 @@ function About() {
                 </Grid>
                 <Grid
                     item
-                    xs={12}
-                    paddingX={"25%"}
+                    xs={12} 
                     paddingTop={3}
+                    paddingX={"20%"}
                 >
                     <CardMedia
                         component="img"
@@ -49,7 +49,7 @@ function About() {
                     item
                     xs={12}
                     paddingTop={3}
-                    paddingX={"15%"}
+                    paddingX={"10%"}
                 >
                     <Card>
                         <CardContent>
@@ -93,7 +93,7 @@ function About() {
                 <Grid
                     item xs={12}
                     paddingTop={3}
-                    paddingX={"15%"}
+                    paddingX={"10%"}
                 >
                     <Card>
                         <CardContent>
@@ -130,7 +130,7 @@ function About() {
                     item
                     xs={12}
                     paddingTop={3}
-                    paddingX={"15%"}
+                    paddingX={"10%"}
 
                 >
                     <Card>

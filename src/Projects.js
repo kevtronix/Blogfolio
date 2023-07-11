@@ -15,30 +15,24 @@ import LinkIcon from '@mui/icons-material/Link';
 function Projects() {
     return (
         <Box
-            display={"flex"}
-            justifyContent={"center"}
             className='projects-page'
-            sx={{
-                height: "100vh",
-                width: "100%"
-            }}
+            minHeight={"100vh"} 
         >
             <Grid
                 container
-                spacing={5}
-                paddingX={"20%"}
+                paddingX={"10%"}
                 paddingY={"20%"}
             >
                 <Grid
                     item xs={12}
                     paddingBottom={3}
                 >
-                    <Card
-                        sx={{
-                            textAlign: "left",
-                            paddingX: 3,
-                            paddingTop: 2
-                        }}
+                    <Card 
+                        sx={
+                            {
+                                textAlign: "left"
+                            }
+                        }
                     >
                         <CardContent
                         >
