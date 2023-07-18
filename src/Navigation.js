@@ -57,6 +57,14 @@ function Navigation() {
                             Projects
                         </Typography>
                     </Button>
+                    <Button
+                        color="inherit"
+                        onClick={() => navigate("/blog")}
+                    >
+                        <Typography variant="h6">
+                            Blog
+                        </Typography>
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>

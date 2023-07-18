@@ -61,19 +61,20 @@ List of features ready and TODOs for future development
 * Content Modification: Welcome page and About page edited 
 * Deployed Website to self hosted server
 * CI/CD: Integrate with Github actions and make sure that each commit can 
-directly go towards updating the server 
+directly go towards updating personal server 
 * Fix viewing issue with the homepage and projects page (grid)
 * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
+* Host the project on Google Cloud while server is being set up 
 
 * TODO:
-    * Host the project on Google Cloud while server is being set up 
-    * Blog functionality 
+    * Blog functionality - connected to database
     * Image showcase 
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
     * Implement tests in order to ensure 
-
+    * Create a workflow to allow CI/CD to work for google cloud
+    * Implement animations
 
 ## Status
-Project is: _in progress_ 
+Project is: _ongoing_ 
 
 ---

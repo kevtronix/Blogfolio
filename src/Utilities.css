@@ -34,3 +34,19 @@
     background-size: cover;
     background-position: center;
 }
+
+
+.blog-page {
+    background-image: url("./images/blog_background.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.error-page {
+    background-image: url("./images/error_page.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
