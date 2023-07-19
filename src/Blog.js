@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { IconButton } from "@mui/material";
-
+import Error from './Error';
 
 
 
@@ -21,15 +21,22 @@ function Blog() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axiosConfig.get('/blogs') 
+        axiosConfig.get('/blogs')
             .then(res => {
                 console.log(res);
                 setPosts(res.data);
             })
             .catch(err => {
                 console.log(err);
+                setPosts(null);
             })
     }, [])
+
+    if (posts == null) {
+        return (
+            <Error message="Something went wrong. Try again." />
+        )
+    }
 
     // display snippet of each post
     return (

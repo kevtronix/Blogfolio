@@ -65,9 +65,14 @@ directly go towards updating personal server
 * Fix viewing issue with the homepage and projects page (grid)
 * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
 * Host the project on Google Cloud while server is being set up 
+* Blog functionality - connected to database
+* Optimize the log in page so that it is able to navigate to the home page after logging in
 
-* TODO:
-    * Blog functionality - connected to database
+* TODO:    
+    * Optimize the log in page so that it is able to navigate to the home page after logging in
+    * Show specific views to authenticated user
+    * Project Database functionality
+    * Handle situations for errors in blog retrieval
     * Image showcase 
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
     * Implement tests in order to ensure 

@@ -4,26 +4,33 @@ import Projects from './Projects';
 import Navigation from './Navigation';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
+import Login from './Login';
 import './App.css';
 import './Utilities.css';
 import { BlogProvider } from './BlogContext';
+import { AuthProvider } from './AuthContext';
 
 import { Route, Routes } from "react-router-dom";
+import Error from './Error';
 
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <BlogProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/post" element={<BlogPost />} />
-        </Routes>
-      </BlogProvider>
+      <AuthProvider>
+        <BlogProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/post" element={<BlogPost />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<Error message="Page not found." />} />
+          </Routes>
+        </BlogProvider>
+      </AuthProvider>
     </div>
   );
 }
