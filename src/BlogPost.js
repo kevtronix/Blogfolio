@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { BlogContext } from './BlogContext';
+import { AuthContext } from './AuthContext';
 import './Utilities.css';
 import Card from '@mui/material/Card';
-import { CardContent, Typography } from "@mui/material";
+import { CardContent, IconButton, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Error from './Error';
+import EditIcon from '@mui/icons-material/Edit';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,8 +16,15 @@ import Error from './Error';
 
 function BlogPost() {
     const { post } = useContext(BlogContext);
+    const { token } = useContext(AuthContext);
+    const navigate = useNavigate();
 
-    if (post == null) { 
+    const handleClick = (e) => {
+        e.preventDefault();
+        navigate('/blog/post/edit') 
+    }
+
+    if (post == null) {
         return (
             <Error message="No blog post found." />
         )
@@ -46,6 +56,15 @@ function BlogPost() {
                                     {post.body}
                                 </Typography>
                             </CardContent>
+                            {token ? <IconButton
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="Edit"
+                                onClick={handleClick}
+                            >
+                                <EditIcon />
+                            </IconButton> : null}
                         </Card>
                     </Grid>
                 }

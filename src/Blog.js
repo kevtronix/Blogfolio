@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import { BlogContext } from './BlogContext';
+import { AuthContext } from './AuthContext';
 import axiosConfig from './axiosConfig';
 import './Utilities.css';
 import Card from '@mui/material/Card';
@@ -10,6 +11,7 @@ import Box from '@mui/material/Box';
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { IconButton } from "@mui/material";
 import Error from './Error';
+import DeleteButton from './DeleteButton';
 
 
 
@@ -18,6 +20,7 @@ function Blog() {
     // retrieve post data from API 
     const [posts, setPosts] = useState([]);
     const { post, setPost } = useContext(BlogContext);
+    const { token } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -51,36 +54,38 @@ function Blog() {
             >
                 {
                     posts.map(post => (
-                        <Grid
-                            item
-                            xs={12}
-                            paddingX={"10%"}
-                            paddingTop={3}
-                        >
-                            <Card>
-                                <CardContent>
-                                    <Typography variant="h2" color={"primary"}>
-                                        {post.title}
-                                    </Typography>
-                                    <Typography variant="h5" color={"secondary"}>
-                                        {post.snippet}... <IconButton
-                                            size="large"
-                                            edge="start"
-                                            color="inherit"
-                                            aria-label="Read More"
-                                            onClick={
-                                                () => {
-                                                    setPost(post);
-                                                    navigate('/blog/post');
+                            <Grid
+                                item
+                                xs={12}
+                                paddingX={"10%"}
+                                paddingTop={3}
+                                key={post.id}
+                            >
+                                <Card>
+                                    <CardContent>
+                                        <Typography variant="h2" color={"primary"}>
+                                            {post.title}
+                                        </Typography>
+                                        <Typography variant="h5" color={"secondary"}>
+                                            {post.snippet}... <IconButton
+                                                size="large"
+                                                edge="start"
+                                                color="inherit"
+                                                aria-label="Read More"
+                                                onClick={
+                                                    () => {
+                                                        setPost(post);
+                                                        navigate('/blog/post');
+                                                    }
                                                 }
-                                            }
-                                        >
-                                            <ReadMoreIcon />
-                                        </IconButton>
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                                            >
+                                                <ReadMoreIcon />
+                                            </IconButton>
+                                            {token ? <DeleteButton url='blogs' id={post.id} /> : null}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grid>
                     ))
                 }
             </Grid>

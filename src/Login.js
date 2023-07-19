@@ -6,9 +6,7 @@ import { CardContent, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { AuthContext } from './AuthContext';
-import { useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 
@@ -17,12 +15,10 @@ import LoginIcon from '@mui/icons-material/Login';
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { token, logIn } = useContext(AuthContext);
-    const navigate = useNavigate();
+    const { logIn } = useContext(AuthContext);
 
     const handleClick = (e) => {
         e.preventDefault();
-        console.log(username, password);
         logIn(username, password);  
     };
 
@@ -52,8 +48,8 @@ function Login() {
                                     id="outlined-basic"
                                     label="Username"
                                     variant="outlined"
-                                    fullWidth
                                     margin="normal"
+                                    fullWidth
                                     onChange={(e) => setUsername(e.target.value)}
 
                                 />
@@ -61,14 +57,13 @@ function Login() {
                                     id="outlined-basic"
                                     label="Password"
                                     variant="outlined"
-                                    fullWidth
                                     margin="normal"
+                                    fullWidth
                                     onChange={(e) => setPassword(e.target.value)}
                                 />
                                 <IconButton 
                                     variant="contained"
                                     color="primary"
-                                    fullWidth
                                     onClick = {handleClick}
                                 >
                                     <LoginIcon />
