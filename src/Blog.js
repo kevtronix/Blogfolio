@@ -4,6 +4,7 @@ import { BlogContext } from './BlogContext';
 import { AuthContext } from './AuthContext';
 import axiosConfig from './axiosConfig';
 import './Utilities.css';
+import AddItemButton from './AddItemButton';
 import Card from '@mui/material/Card';
 import { CardContent, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
@@ -12,7 +13,6 @@ import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { IconButton } from "@mui/material";
 import Error from './Error';
 import DeleteButton from './DeleteButton';
-
 
 
 
@@ -52,6 +52,9 @@ function Blog() {
                 paddingTop={3}
                 paddingX={4}
             >
+                { token ? <AddItemButton
+                                type="post" 
+                                url='/blog/add' /> : null}
                 {
                     posts.map(post => (
                         <Grid

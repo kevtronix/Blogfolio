@@ -1,43 +1,31 @@
 
-import { useState, useContext } from 'react';
-import { BlogContext } from './BlogContext';
+import { useState } from 'react';
+import { Box, Grid, Card, CardContent, Typography, TextField, IconButton } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 import axiosConfig from './axiosConfig';
-import {
-    Box, Card,
-    CardContent, Grid, IconButton,
-    TextField, Typography
-} from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
-import Error from './Error';
 
+function AddBlog() {
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+    const now = new Date();
+    const timestamp = now.toISOString();
 
-function EditPostPage() {
-    const { post } = useContext(BlogContext);
-    const [title, setTitle] = useState(post.title);
-    const [body, setBody] = useState(post.body);
     const navigate = useNavigate();
 
 
-    if (post == null) {
-        return (
-            <Error message="No blog post found. Go back and try again" />
-        )
-    }
-
     const handleClick = (e) => {
         e.preventDefault();
-        axiosConfig.put(`/blogs/${post.id}/`,
+        axiosConfig.post('/blogs/',
             {
                 title: title,
                 snippet: body.substring(0, 150),
                 body: body,
-                timestamp: post.timestamp
+                timestamp: timestamp
             })
             .then(res => {
                 console.log(res);
                 navigate('/blog');
-
             }
             )
             .catch(err => {
@@ -45,7 +33,6 @@ function EditPostPage() {
             }
             )
     }
-
     return (
         <Box
             className='home-page'
@@ -73,7 +60,7 @@ function EditPostPage() {
                                         xs={12}
                                     >
                                         <Typography variant="h3" color={"primary"}>
-                                            Edit Post
+                                            Add Post
                                         </Typography>
                                     </Grid>
                                     <Grid
@@ -112,7 +99,7 @@ function EditPostPage() {
                                             color="primary"
                                             onClick={handleClick}
                                         >
-                                            <EditIcon />
+                                            <AddIcon />
                                         </IconButton>
                                     </Grid>
                                 </Grid>
@@ -125,5 +112,4 @@ function EditPostPage() {
     )
 }
 
-
-export default EditPostPage;
+export default AddBlog;

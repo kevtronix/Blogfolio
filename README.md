@@ -67,10 +67,14 @@ directly go towards updating personal server
 * Host the project on Google Cloud while server is being set up 
 * Blog functionality - connected to database
 * Show specific views to authenticated user
+* Optimize the log in page so that it is able to navigate to the home page after logging in
+ * Modify the blog post edit page so that the snippets only take a portion of 
+    the body and not the entire body
+* Create functionality to add a blog post 
 
-* TODO:    
-    * Optimize the log in page so that it is able to navigate to the home page after logging in
-    * Store a retrieved blog post into local storage and check to see if its 
+
+* TODO:
+     * Store a retrieved blog post into local storage and check to see if its 
     there in context before making a request to the server 
     * Project Database functionality
     * Handle situations for errors in blog retrieval

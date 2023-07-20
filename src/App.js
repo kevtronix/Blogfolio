@@ -4,6 +4,7 @@ import Projects from './Projects';
 import Navigation from './Navigation';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
+import AddBlog from './AddBlog';
 import EditPostPage from './EditPostPage';
 import Login from './Login';
 import './App.css';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/post" element={<BlogPost />} />
+            <Route path="/blog/add" element={<AddBlog />} />
             <Route path="blog/post/edit" element={<EditPostPage />}/> 
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Error message="Page not found." />} />
