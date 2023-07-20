@@ -1,5 +1,5 @@
 
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { BlogContext } from './BlogContext';
 import axiosConfig from './axiosConfig';
 import {
@@ -9,21 +9,29 @@ import {
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
-import Error from './Error';
+import ErrorMessage from './ErrorMessage';
 
 
 function EditPostPage() {
-    const { post } = useContext(BlogContext);
-    const [title, setTitle] = useState(post.title);
-    const [body, setBody] = useState(post.body);
+    const { post, retrievePost } = useContext(BlogContext);
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
     const navigate = useNavigate();
 
+    // retrieve post data from API
+    useEffect(() => {
+        // if no post is found, check localStorage for postID
+        if (!post && localStorage.getItem('postID')) {
+            retrievePost(localStorage.getItem('postID'));
+        }
+    })
 
-    if (post == null) {
-        return (
-            <Error message="No blog post found. Go back and try again" />
-        )
-    }
+    useEffect(() => {
+        if (post) {
+            setTitle(post.title);
+            setBody(post.body);
+        }
+    }, [post])
 
     const handleClick = (e) => {
         e.preventDefault();
@@ -51,6 +59,7 @@ function EditPostPage() {
             className='home-page'
             minHeight={"100vh"}
         >
+            {post ? 
             <Grid
                 container
                 paddingTop={25}
@@ -120,7 +129,7 @@ function EditPostPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-            </Grid>
+            </Grid>: <ErrorMessage message="No blog post found." />}
         </Box >
     )
 }

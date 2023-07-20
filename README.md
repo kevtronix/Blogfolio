@@ -71,11 +71,12 @@ directly go towards updating personal server
  * Modify the blog post edit page so that the snippets only take a portion of 
     the body and not the entire body
 * Create functionality to add a blog post 
+* Store a retrieved blog post into local storage and check to see if its 
+    there in context before making a request to the server 
 
 
 * TODO:
-     * Store a retrieved blog post into local storage and check to see if its 
-    there in context before making a request to the server 
+   
     * Project Database functionality
     * Handle situations for errors in blog retrieval
     * Image showcase 
