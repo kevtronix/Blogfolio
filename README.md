@@ -66,11 +66,12 @@ directly go towards updating personal server
 * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
 * Host the project on Google Cloud while server is being set up 
 * Blog functionality - connected to database
-* Optimize the log in page so that it is able to navigate to the home page after logging in
+* Show specific views to authenticated user
 
 * TODO:    
     * Optimize the log in page so that it is able to navigate to the home page after logging in
-    * Show specific views to authenticated user
+    * Store a retrieved blog post into local storage and check to see if its 
+    there in context before making a request to the server 
     * Project Database functionality
     * Handle situations for errors in blog retrieval
     * Image showcase 
@@ -80,6 +81,6 @@ directly go towards updating personal server
     * Implement animations
 
 ## Status
-Project is: _ongoing_ 
+Project is: _always-improving_ 
 
 ---

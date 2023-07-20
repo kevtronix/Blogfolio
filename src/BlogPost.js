@@ -21,7 +21,7 @@ function BlogPost() {
 
     const handleClick = (e) => {
         e.preventDefault();
-        navigate('/blog/post/edit') 
+        navigate('/blog/post/edit')
     }
 
     if (post == null) {
@@ -55,16 +55,16 @@ function BlogPost() {
                                 <Typography variant="h5" color={"secondary"}>
                                     {post.body}
                                 </Typography>
+                                {token ? <IconButton
+                                    size="large"
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="Edit"
+                                    onClick={handleClick}
+                                >
+                                    <EditIcon />
+                                </IconButton> : null}
                             </CardContent>
-                            {token ? <IconButton
-                                size="large"
-                                edge="start"
-                                color="inherit"
-                                aria-label="Edit"
-                                onClick={handleClick}
-                            >
-                                <EditIcon />
-                            </IconButton> : null}
                         </Card>
                     </Grid>
                 }

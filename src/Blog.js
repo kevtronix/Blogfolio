@@ -19,7 +19,7 @@ import DeleteButton from './DeleteButton';
 function Blog() {
     // retrieve post data from API 
     const [posts, setPosts] = useState([]);
-    const { post, setPost } = useContext(BlogContext);
+    const { setPost } = useContext(BlogContext);
     const { token } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -54,38 +54,60 @@ function Blog() {
             >
                 {
                     posts.map(post => (
-                            <Grid
-                                item
-                                xs={12}
-                                paddingX={"10%"}
-                                paddingTop={3}
-                                key={post.id}
-                            >
-                                <Card>
-                                    <CardContent>
-                                        <Typography variant="h2" color={"primary"}>
-                                            {post.title}
-                                        </Typography>
-                                        <Typography variant="h5" color={"secondary"}>
-                                            {post.snippet}... <IconButton
-                                                size="large"
-                                                edge="start"
-                                                color="inherit"
-                                                aria-label="Read More"
-                                                onClick={
-                                                    () => {
-                                                        setPost(post);
-                                                        navigate('/blog/post');
-                                                    }
-                                                }
+                        <Grid
+                            item
+                            xs={12}
+                            paddingX={"28%"}
+                            paddingY={2}
+                            key={post.id}
+                        >
+                            <Card>
+                                <CardContent>
+                                    <Grid
+                                        container
+                                        paddingY={2}
+                                    >
+                                        <Grid
+                                            item
+                                            xs={12}
+                                        >
+                                            <Typography
+                                                variant="h2"
+                                                color={"primary"}
                                             >
-                                                <ReadMoreIcon />
-                                            </IconButton>
-                                            {token ? <DeleteButton url='blogs' id={post.id} /> : null}
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
+                                                {post.title}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid
+                                            item
+                                            xs={12}
+
+                                        >
+                                            <Typography
+                                                variant="h4"
+                                                color={"secondary"}
+                                            >
+                                                {post.snippet}... <IconButton
+                                                    size="large"
+                                                    edge="start"
+                                                    color="inherit"
+                                                    aria-label="Read More"
+                                                    onClick={
+                                                        () => {
+                                                            setPost(post);
+                                                            navigate('/blog/post');
+                                                        }
+                                                    }
+                                                >
+                                                    <ReadMoreIcon />
+                                                </IconButton>
+                                                {token ? <DeleteButton url='blogs' id={post.id} /> : null}
+                                            </Typography>
+                                        </Grid>
+                                    </Grid>
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     ))
                 }
             </Grid>

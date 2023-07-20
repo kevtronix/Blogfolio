@@ -43,9 +43,6 @@ function EditPostPage() {
             )
     }
 
-
-
-
     return (
         <Box
             className='home-page'
