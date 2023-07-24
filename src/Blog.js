@@ -33,14 +33,14 @@ function Blog() {
                 console.log(err);
                 setPosts(null);
             })
-    }, [])
+    }, [token])
 
 
     return (
         <Box
             className='blog-page'
             minHeight={"100vh"}
-        > {posts ? 
+        > {posts ?
             <Grid
                 container
                 paddingTop={3}
@@ -107,7 +107,7 @@ function Blog() {
                         </Grid>
                     ))
                 }
-            </Grid>: <ErrorMessage message="Oops! Something went wrong!" />}
+            </Grid> : <ErrorMessage message="Oops! Something went wrong!" />}
         </Box >
     )
 }

@@ -73,11 +73,10 @@ directly go towards updating personal server
 * Create functionality to add a blog post 
 * Store a retrieved blog post into local storage and check to see if its 
     there in context before making a request to the server 
+* Updated to use JWT tokens
 
 
 * TODO:
-   
-    * Project Database functionality
     * Handle situations for errors in blog retrieval
     * Image showcase 
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
