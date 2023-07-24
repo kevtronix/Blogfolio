@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, IconButton, Typography } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
+import { Grid, Typography } from '@mui/material';
+import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,20 +13,19 @@ function AddItemButton(props) {
          paddingY={2}
          justifyContent={"center"}
       >
-         <Typography
-            variant="h3"
-            color={"secondary"}
-         >
-            Add {props.type}
-         </Typography>
-         <IconButton
+         <Button
             variant="contained"
             size="large"
             color="secondary"
             onClick={() => navigate(`${props.url}`)}
+         > 
+
+         <Typography
+            variant="h4"
          >
-            <AddIcon />
-         </IconButton>
+            Add {props.type}
+         </Typography>
+         </Button>
       </Grid>
    )
 }

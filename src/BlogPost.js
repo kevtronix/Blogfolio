@@ -3,24 +3,22 @@ import { BlogContext } from './BlogContext';
 import { AuthContext } from './AuthContext';
 import './Utilities.css';
 import Card from '@mui/material/Card';
-import { CardContent, IconButton, Typography } from "@mui/material";
+import { CardContent, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import ErrorMessage from './ErrorMessage';
-import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
+import Button from '@mui/material/Button';
 
 
 
 function BlogPost() {
     const { post, retrievePost } = useContext(BlogContext);
-
     const { token } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
-    const handleClick = (e) => {
-        e.preventDefault();
+    const handleClick = () => {
         navigate('/blog/post/edit')
     }
 
@@ -30,7 +28,7 @@ function BlogPost() {
         if (!post && localStorage.getItem('postID')) {
             retrievePost(localStorage.getItem('postID'));
         }
-    } )
+    })
 
     return (
         <Box
@@ -42,6 +40,7 @@ function BlogPost() {
                     container
                     paddingTop={3}
                     paddingX={4}
+                    justifyContent={"center"}
                 >
                     {
                         <Grid
@@ -55,25 +54,64 @@ function BlogPost() {
                                     <Typography variant="h2" color={"primary"}>
                                         {post.title}
                                     </Typography>
-                                    <Typography variant="h5" color={"secondary"}>
+                                    <Typography
+                                        variant="h5"
+                                        color={"secondary"}
+                                        paddingBottom={3}
+                                    >
                                         {post.body}
                                     </Typography>
-                                    {token ? <IconButton
-                                        size="large"
-                                        edge="start"
-                                        color="inherit"
-                                        aria-label="Edit"
-                                        onClick={handleClick}
-                                    >
-                                        <EditIcon />
-                                    </IconButton> : null}
                                 </CardContent>
                             </Card>
+
                         </Grid>
                     }
+                    <Grid
+                        item
+                        paddingY={3}
+                        paddingX={4}
+                    >
+                        <Button
+                            variant="contained"
+                            size="medium"
+                            color="primary"
+                            aria-label="Back"
+                            onClick={() => navigate('/blog')}
+                        >
+                            <Typography
+                                variant="h4"
+                            >
+                                Back
+                            </Typography>
+                        </Button>
+                    </Grid>
+                    {token ? 
+                    <Grid
+                        item
+                        paddingY={3}
+                        paddingX={4}
+                    >
+                        <Button
+                            variant="contained"
+                            size="medium"
+                            color="secondary"
+                            aria-label="Back"
+                            onClick={() => handleClick()}
+                        >
+                            <Typography
+                                variant="h4"
+                            >
+                                Edit 
+                            </Typography>
+                        </Button>
+                    </Grid>
+                    : null}
                 </Grid> : <ErrorMessage message="No blog post found" />}
         </Box >
     )
 }
 
 export default BlogPost;
+
+
+

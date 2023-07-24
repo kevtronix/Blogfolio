@@ -4,12 +4,12 @@ import { BlogContext } from './BlogContext';
 import axiosConfig from './axiosConfig';
 import {
     Box, Card,
-    CardContent, Grid, IconButton,
+    CardContent, Grid, 
     TextField, Typography
 } from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
 import ErrorMessage from './ErrorMessage';
+import Button from '@mui/material/Button';
 
 
 function EditPostPage() {
@@ -18,14 +18,14 @@ function EditPostPage() {
     const [body, setBody] = useState('');
     const navigate = useNavigate();
 
-    // retrieve post data from API
+    // retrieve post data from API if postID exists in localStorage
     useEffect(() => {
         // if no post is found, check localStorage for postID
         if (!post && localStorage.getItem('postID')) {
             retrievePost(localStorage.getItem('postID'));
         }
     })
-
+    // set title and body to post data
     useEffect(() => {
         if (post) {
             setTitle(post.title);
@@ -116,13 +116,19 @@ function EditPostPage() {
                                         item
                                         xs={12}
                                     >
-                                        <IconButton
+                                        <Button
                                             variant="contained"
+                                            size="medium"
                                             color="primary"
-                                            onClick={handleClick}
+                                            onClick={handleClick} 
                                         >
-                                            <EditIcon />
-                                        </IconButton>
+
+                                            <Typography
+                                                variant="h5"
+                                            >
+                                                Submit
+                                            </Typography>
+                                        </Button>
                                     </Grid>
                                 </Grid>
                             </form>
