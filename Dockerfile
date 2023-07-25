@@ -1,5 +1,5 @@
 # Stage 1 - the build process
-FROM node:20-alpine
+FROM node:20-alpine as build
 WORKDIR /usr/src/app 
 COPY package.json ./
 RUN npm install
