@@ -7,6 +7,7 @@ COPY . ./
 RUN npm run build 
 
 
+
 # Stage 2 - the production environment
 FROM nginx:1.16.0-alpine
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
