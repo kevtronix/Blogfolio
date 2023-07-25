@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const axiosConfig = axios.create({
     baseURL: process.env.REACT_APP_API_URL
 });
@@ -10,6 +9,11 @@ axiosConfig.interceptors.response.use((response) => {
 }, async (error) => {
     // If error is 401, try to refresh token
     const originalRequest = error.config;
+    // If error is not 401 or if it's the refresh token endpoint, return error
+    if (error.response.status !== 401 || originalRequest.url === '/token/refresh/') {
+        return Promise.reject(error);
+    }
+    // If error is 401 and it's not the refresh token endpoint, try to refresh token
     if (error.response.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
 
