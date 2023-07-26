@@ -9,7 +9,7 @@
 
 
 # Stage 2 - the production environment
-FROM nginx:alpline
+FROM nginx:latest
 COPY nginx.conf /etc/nginx/conf.d/configfile.template
 # COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
