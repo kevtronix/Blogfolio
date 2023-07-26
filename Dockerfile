@@ -18,4 +18,4 @@ ENV HOST 0.0.0.0
 EXPOSE 8080
 
 
-CMD /bin/sh -c "envsubst '\$PORT < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+CMD /bin/sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
