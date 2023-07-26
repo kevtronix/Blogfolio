@@ -8,7 +8,6 @@ import { GitHub } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
 import { Instagram } from "@mui/icons-material";
 import NoteIcon from '@mui/icons-material/Note';
-import EmailIcon from '@mui/icons-material/Email';
 import { AppBar } from "@mui/material";
 import Card from '@mui/material/Card';
 
@@ -47,7 +46,7 @@ function ContactBar() {
                             edge="start"
                             color="inherit"
                             aria-label="LinkedIn"
-                            sx={{ mr: 2 }} 
+                            sx={{ mr: 2 }}
                         >
                             <LinkedIn />
                         </IconButton>
@@ -68,15 +67,6 @@ function ContactBar() {
                             sx={{ mr: 2 }}
                         >
                             <NoteIcon />
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            edge="start"
-                            color="inherit"
-                            aria-label="Email"
-                            sx={{ mr: 2 }}
-                        >
-                            <EmailIcon />
                         </IconButton>
                     </Toolbar>
                 </Card>
