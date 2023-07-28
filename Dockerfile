@@ -1,10 +1,11 @@
 # Stage 1 - the build process
 FROM node:20-alpine as build
 WORKDIR /usr/src/app 
-COPY package.json ./
+COPY package*.json ./
 RUN npm install 
-COPY . ./   
-RUN npm run build 
+COPY .  ./  
+ARG REACT_APP_API_URL
+RUN REACT_APP_API_URL=$REACT_APP_API_URL npm run build 
 
 
 
