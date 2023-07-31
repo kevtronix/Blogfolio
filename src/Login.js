@@ -9,7 +9,6 @@ import { AuthContext } from './AuthContext';
 import TextField from '@mui/material/TextField';
 import { IconButton } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
-import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -47,6 +46,7 @@ function Login() {
                             <form >
                                 <TextField
                                     id="outlined-basic"
+                                    required
                                     label="Username"
                                     variant="outlined"
                                     margin="normal"
@@ -56,6 +56,8 @@ function Login() {
                                 />
                                 <TextField
                                     id="outlined-basic"
+                                    type="password"
+                                    required
                                     label="Password"
                                     variant="outlined"
                                     margin="normal"

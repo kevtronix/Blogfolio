@@ -14,15 +14,27 @@ export const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // change axios authorization header when token changes 
-        axiosConfig.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        // set the new item in local storage when token changes
-        localStorage.setItem('token', token);
-    }, [token]) 
+        // if token is string "null", set token to null (retrieving from local storage)
+        if (token === "null") {
+            setToken(null);
+        }
+        if (token) {
+            // change axios authorization header when token changes 
+            axiosConfig.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            // set the new item in local storage when token changes
+            localStorage.setItem('token', token);
+        }
+    }, [token])
 
     useEffect(() => {
+        // if refresh token is string "null", set refresh to null (retrieving from local storage)
+        if (refresh === "null") {
+            setRefresh(null);
+        }
+        if (refresh) {
+            localStorage.setItem('refresh', refresh);
+        }
         // set new refresh token in local storage when refresh token changes
-        localStorage.setItem('refresh', refresh);
     }, [refresh])
 
     const logIn = (username, password, url) => {
@@ -39,7 +51,9 @@ export const AuthProvider = ({ children }) => {
                 navigate(url);
             })
             .catch(err => {
-                console.log(err); 
+                console.log(err);
+                setToken(null);
+                setRefresh(null);
             })
     }
 

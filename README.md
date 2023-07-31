@@ -59,9 +59,6 @@ List of features ready and TODOs for future development
 * Theming set 
 * Skeleton for server outputs. 
 * Content Modification: Welcome page and About page edited 
-* Deployed Website to self hosted server
-* CI/CD: Integrate with Github actions and make sure that each commit can 
-directly go towards updating personal server 
 * Fix viewing issue with the homepage and projects page (grid)
 * Responsiveness: Enhance the website's design to better accommodate smaller scale devices, ensuring a positive user experience across all device types.
 * Host the project on Google Cloud while server is being set up 
@@ -74,15 +71,16 @@ directly go towards updating personal server
 * Store a retrieved blog post into local storage and check to see if its 
     there in context before making a request to the server 
 * Updated to use JWT tokens
+* CI/CD: Integrate with  Google Cloudand make sure that each commit can 
+directly go towards updating personal server 
 
 
 * TODO:
-    * Handle situations for errors in blog retrieval
     * Image showcase 
+    * Refactor code to make it more readable and maintainable
+    * Refactor CI pipeline to use github actions to push to Google Cloud
     * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
-    * Implement tests in order to ensure 
-    * Create a workflow to allow CI/CD to work for google cloud
-    * Implement animations
+    * Implement tests in order to ensure that the website is functioning as expected.
 
 ## Status
 Project is: _always-improving_ 

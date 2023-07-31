@@ -18,7 +18,7 @@ axiosConfig.interceptors.response.use((response) => {
         originalRequest._retry = true;
 
         // Attempt to refresh token
-        const refreshToken = localStorage.getItem('refresh');
+        const refreshToken = localStorage.getItem('refresh'); 
         const res = await axiosConfig.post('/token/refresh/', {
             refresh: refreshToken,
         })

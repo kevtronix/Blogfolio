@@ -40,74 +40,77 @@ function Blog() {
         <Box
             className='blog-page'
             minHeight={"100vh"}
-        > {posts ?
-            <Grid
-                container
-                paddingTop={3}
-                paddingX={4}
-            >
-                {token ? <AddItemButton
-                    type="post"
-                    url='/blog/add' /> : null}
-                {
-                    posts.map(post => (
-                        <Grid
-                            item
-                            xs={12}
-                            paddingX={"28%"}
-                            paddingY={2}
-                            key={post.id}
-                        >
-                            <Card>
-                                <CardContent>
-                                    <Grid
-                                        container
-                                        paddingY={2}
-                                    >
-                                        <Grid
-                                            item
-                                            xs={12}
-                                        >
-                                            <Typography
-                                                variant="h2"
-                                                color={"primary"}
-                                            >
-                                                {post.title}
-                                            </Typography>
-                                        </Grid>
-                                        <Grid
-                                            item
-                                            xs={12}
+        >
+            {token ? <AddItemButton
+                type="post"
+                url='/blog/add' /> : null
+            }
 
+            {posts && !token ?
+                <Grid
+                    container
+                    paddingTop={3}
+                    paddingX={4}
+                >
+                    {
+                        posts.map(post => (
+                            <Grid
+                                item
+                                xs={12}
+                                paddingX={"28%"}
+                                paddingY={2}
+                                key={post.id}
+                            >
+                                <Card>
+                                    <CardContent>
+                                        <Grid
+                                            container
+                                            paddingY={2}
                                         >
-                                            <Typography
-                                                variant="h4"
-                                                color={"secondary"}
+                                            <Grid
+                                                item
+                                                xs={12}
                                             >
-                                                {post.snippet}... <IconButton
-                                                    size="large"
-                                                    edge="start"
-                                                    color="inherit"
-                                                    aria-label="Read More"
-                                                    onClick={
-                                                        () => {
-                                                            setPost(post);
-                                                            navigate('/blog/post');
-                                                        }
-                                                    }
+                                                <Typography
+                                                    variant="h2"
+                                                    color={"primary"}
                                                 >
-                                                    <ReadMoreIcon />
-                                                </IconButton>
-                                                {token ? <DeleteButton url='blogs' id={post.id} /> : null}
-                                            </Typography>
+                                                    {post.title}
+                                                </Typography>
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                xs={12}
+
+                                            >
+                                                <Typography
+                                                    variant="h4"
+                                                    color={"secondary"}
+                                                >
+                                                    {post.snippet}... <IconButton
+                                                        size="large"
+                                                        edge="start"
+                                                        color="inherit"
+                                                        aria-label="Read More"
+                                                        onClick={
+                                                            () => {
+                                                                setPost(post);
+                                                                navigate('/blog/post');
+                                                            }
+                                                        }
+                                                    >
+                                                        <ReadMoreIcon />
+                                                    </IconButton>
+                                                    {token ? <DeleteButton url='blogs' id={post.id} /> : null}
+                                                </Typography>
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))
-                }
-            </Grid> : <ErrorMessage message="Oops! Something went wrong!" />}
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                        ))
+                    }
+                </Grid> : <ErrorMessage message="Oops! Something went wrong!" />}
         </Box >
     )
 }

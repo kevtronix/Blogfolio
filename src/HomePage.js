@@ -9,12 +9,15 @@ import Grid from '@mui/material/Grid';
 function HomePage() {
     return (
         <Box
+            paddingTop={3}
             className='home-page'
             minHeight={"100vh"}
+            justifyContent={"center"}
+            alignItems={"center"}
         >
             <Grid
                 container
-                paddingTop={25}
+                paddingTop={6}
                 paddingX={4}
 
             >
