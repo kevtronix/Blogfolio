@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import ErrorMessage from './ErrorMessage';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
+import { NewlineText } from './NewlineText';
 
 
 
@@ -21,6 +22,7 @@ function BlogPost() {
     const handleClick = () => {
         navigate('/blog/post/edit')
     }
+
 
     // retrieve post data from API
     useEffect(() => {
@@ -57,9 +59,10 @@ function BlogPost() {
                                     <Typography
                                         variant="h5"
                                         color={"secondary"}
+                                        paddingTop={3}
                                         paddingBottom={3}
                                     >
-                                        {post.body}
+                                        <NewlineText text={post.body} />
                                     </Typography>
                                 </CardContent>
                             </Card>
