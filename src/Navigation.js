@@ -22,17 +22,6 @@ function Navigation() {
                     backgroundColor: theme.palette.primary.darker
                 }}>
                 <Toolbar>
-                    {/* }
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="menu"
-                        sx={{ mr: 2 }}
-                    >    
-                    </IconButton>
-                    <MenuIcon />
-                    { */}
                     <Button
                         color="inherit"
                         onClick={() => navigate("/")}
@@ -62,7 +51,7 @@ function Navigation() {
                         onClick={() => navigate("/blog")}
                     >
                         <Typography variant="h6">
-                            Blog
+                            Artificially Stacked
                         </Typography>
                     </Button>
                 </Toolbar>

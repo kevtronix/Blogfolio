@@ -46,7 +46,7 @@ function Blog() {
                 url='/blog/add' /> : null
             }
 
-            {posts && !token ?
+            {posts ?
                 <Grid
                     container
                     paddingTop={3}
