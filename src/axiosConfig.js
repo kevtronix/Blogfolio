@@ -29,7 +29,7 @@ axiosConfig.interceptors.response.use((response) => {
             axiosConfig.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             // Retry original request
             return axiosConfig(originalRequest);
-        }
+        } 
     }
     return Promise.reject(error);
 });

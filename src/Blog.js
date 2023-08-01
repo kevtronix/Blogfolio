@@ -32,7 +32,7 @@ function Blog() {
                 console.log(err);
                 setPosts(null);
             })
-    })
+    }, [])
 
 
     return (

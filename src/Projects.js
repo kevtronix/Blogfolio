@@ -16,7 +16,7 @@ function Projects() {
     return (
         <Box
             className='projects-page'
-            minHeight={"100vh"} 
+            minHeight={"100vh"}
         >
             <Grid
                 container
@@ -27,7 +27,7 @@ function Projects() {
                     item xs={12}
                     paddingBottom={3}
                 >
-                    <Card 
+                    <Card
                         sx={
                             {
                                 textAlign: "left"
@@ -60,7 +60,7 @@ function Projects() {
                                 color={"secondary"}
                                 paddingTop={2}
                             >
-                                Skills
+                                Technologies
                             </Typography>
                             <Typography
                                 variant="h6"
