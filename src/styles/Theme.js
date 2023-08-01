@@ -52,6 +52,15 @@ const draculaTheme = createTheme({
                     borderRadius: 14,
                 }
             }
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    background: darken('#ff779c', 0.2),
+                    height: '2px',
+                    margin: '10px 0',
+                }
+            }
         }
     }
 });

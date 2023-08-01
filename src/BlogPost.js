@@ -48,12 +48,16 @@ function BlogPost() {
                         <Grid
                             item
                             xs={12}
-                            paddingX={"10%"}
+                            paddingX={3}
                             paddingTop={3}
                         >
                             <Card>
                                 <CardContent>
-                                    <Typography variant="h2" color={"primary"}>
+                                    <Typography 
+                                        variant="h3" 
+                                        color={"primary"}
+                                        textAlign={"left"}
+                                        >
                                         {post.title}
                                     </Typography>
                                     <Typography
@@ -61,6 +65,7 @@ function BlogPost() {
                                         color={"secondary"}
                                         paddingTop={3}
                                         paddingBottom={3}
+                                        textAlign={"left"}
                                     >
                                         <NewlineText text={post.body} />
                                     </Typography>

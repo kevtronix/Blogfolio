@@ -13,8 +13,7 @@ import ReadMoreIcon from '@mui/icons-material/ReadMore';
 import { IconButton } from "@mui/material";
 import DeleteButton from './DeleteButton';
 import ErrorMessage from './ErrorMessage';
-
-
+import Divider from '@mui/material/Divider';
 
 function Blog() {
     // retrieve post data from API 
@@ -33,7 +32,7 @@ function Blog() {
                 console.log(err);
                 setPosts(null);
             })
-    }, [token])
+    })
 
 
     return (
@@ -57,7 +56,7 @@ function Blog() {
                             <Grid
                                 item
                                 xs={12}
-                                paddingX={"28%"}
+                                paddingX={1}
                                 paddingY={2}
                                 key={post.id}
                             >
@@ -70,13 +69,15 @@ function Blog() {
                                             <Grid
                                                 item
                                                 xs={12}
+                                                paddingBottom={3}
                                             >
                                                 <Typography
-                                                    variant="h2"
+                                                    variant="h3"
                                                     color={"primary"}
                                                 >
                                                     {post.title}
                                                 </Typography>
+                                                <Divider />
                                             </Grid>
                                             <Grid
                                                 item
@@ -84,7 +85,7 @@ function Blog() {
 
                                             >
                                                 <Typography
-                                                    variant="h4"
+                                                    variant="h5"
                                                     color={"secondary"}
                                                 >
                                                     {post.snippet}... <IconButton
