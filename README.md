@@ -76,12 +76,12 @@ directly go towards updating personal server
 
 
 * TODO:
-    * Image showcase 
     * Refactor code to make it more readable and maintainable
     * Refactor CI pipeline to use github actions to push to Google Cloud
-    * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
     * Implement tests in order to ensure that the website is functioning as expected.
-
+    * Optimizations and UI Work:
+        * Animations: Add animations to each of the pages/cards to make the website more interactive and visually appealing.
+        
 ## Status
 Project is: _always-improving_ 
 
