@@ -25,7 +25,7 @@ function Blog() {
     const { token } = useContext(AuthContext);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         axiosConfig.get('/blogs')
             .then(res => {
@@ -97,8 +97,7 @@ function Blog() {
                                                 >
                                                     {post.snippet}... <IconButton
                                                         size="large"
-                                                        console.log(error);
-                setProjects(null                  color="inherit"
+                                                        color="inherit"
                                                         aria-label="Read More"
                                                         onClick={
                                                             () => {
