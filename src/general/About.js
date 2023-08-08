@@ -1,10 +1,10 @@
 // Purpose: About page component for the application. 
-import ContactBar from './ContactBar';
-import './Utilities.css';
-import Card from '@mui/material/Card';
+import 'utilities/Utilities.css';
 import { CardContent, CardMedia, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import ContactBar from 'utilities/ContactBar';
 
 function About() {
     return (
@@ -40,7 +40,7 @@ function About() {
                 >
                     <CardMedia
                         component="img"
-                        src={require("./images/cartoon_profile_picture.png")}
+                        src={require("images/cartoon_profile_picture.png")}
                         alt="Cartoon Profile Picture"
                         className='profile-image'
                     />
@@ -59,7 +59,7 @@ function About() {
                             <Typography variant="h5">
                                 My journey into software engineering took a detour
                                 through the realm of chemistry. As I was immersing
-                                myself in the world of atoms and molecules, a friend's
+                                myself in the world of atoms and molecules, a friends
                                 recommendation led me to a programming class. That
                                 single decision was a game-changer. The basic principles
                                 of Python - variables, loops - they illuminated a new path

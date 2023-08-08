@@ -1,5 +1,11 @@
 // Purpose: Projects page component for the application. 
-import './Utilities.css';
+import 'utilities/Utilities.css';
+
+
+import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+
+import LinkIcon from '@mui/icons-material/Link';
 import {
     Box,
     Grid,
@@ -9,18 +15,12 @@ import {
     LinearProgress,
     IconButton,
 } from '@mui/material';
-
-
-import { useState, useEffect } from 'react';
-import LinkIcon from '@mui/icons-material/Link';
-
-import axiosConfig from './axiosConfig';
-import ErrorMessage from './ErrorMessage';
 import Divider from '@mui/material/Divider';
-import { AuthContext } from './AuthContext';
-import { useContext } from 'react';
-import AddItemButton from './AddItemButton';
-import DeleteButton from './DeleteButton';
+import { AuthContext } from 'context/AuthContext';
+import AddItemButton from 'utilities/AddItemButton';
+import axiosConfig from 'utilities/AxiosConfig';
+import DeleteButton from 'utilities/DeleteButton';
+import ErrorMessage from 'utilities/ErrorMessage';
 
 function Projects() {
     const [projects, setProjects] = useState([]);

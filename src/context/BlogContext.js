@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
-import axiosConfig from './axiosConfig';
+
+import axiosConfig from 'utilities/AxiosConfig';
 
 // Create BlogContext
 export const BlogContext = createContext();

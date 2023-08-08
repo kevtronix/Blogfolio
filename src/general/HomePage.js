@@ -1,8 +1,8 @@
 // Purpose: Home page component for the application.
-import './Utilities.css';
-import Card from '@mui/material/Card';
+import 'utilities/Utilities.css' 
 import { CardContent, Typography } from "@mui/material";
 import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 
 

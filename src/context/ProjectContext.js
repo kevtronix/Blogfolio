@@ -1,11 +1,10 @@
 import { createContext, useEffect, useState } from 'react';
-import axiosConfig from './axiosConfig';
 
-// Create BlogContext
+import axiosConfig from 'utilities/AxiosConfig';
+
 export const ProjectContext = createContext();
 
-// Create BlogProvider
-export const BlogProvider = ({ children }) => {
+export const ProjectProvider = ({ children }) => {
     const [project, setproject] = useState();
 
     // Every time project changes, save project.id to localStorage
@@ -28,8 +27,8 @@ export const BlogProvider = ({ children }) => {
     }
 
     return (
-        <BlogContext.Provider value={{ project, setproject, retrieveproject }}>
+        <ProjectContext.Provider value={{ project, setproject, retrieveproject }}>
             {children}
-        </BlogContext.Provider>
+        </ProjectContext.Provider>
     );
 }

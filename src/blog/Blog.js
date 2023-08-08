@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
-import { BlogContext } from './BlogContext';
-import { AuthContext } from './AuthContext';
-import axiosConfig from './axiosConfig';
-import './Utilities.css';
-import AddItemButton from './AddItemButton';
-import Card from '@mui/material/Card';
-import { CardContent, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+
 import ReadMoreIcon from '@mui/icons-material/ReadMore';
+import { CardContent, Typography } from "@mui/material";
 import { IconButton } from "@mui/material";
-import DeleteButton from './DeleteButton';
-import ErrorMessage from './ErrorMessage';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import { AuthContext } from 'context/AuthContext';
+import { BlogContext } from 'context/BlogContext';
+import AddItemButton from 'utilities/AddItemButton';
+import axiosConfig from 'utilities/AxiosConfig';
+import 'utilities/Utilities.css';
+import DeleteButton from 'utilities/DeleteButton';
+import ErrorMessage from 'utilities/ErrorMessage';
+
 
 function Blog() {
     // retrieve post data from API 

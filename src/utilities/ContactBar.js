@@ -1,13 +1,13 @@
 // Purpose: App bar that is displayed inline to allow people to access various 
 // social media 
 
-import { Toolbar } from "@mui/material";
-import { Box } from "@mui/material";
-import { IconButton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import { LinkedIn } from "@mui/icons-material";
 import { Instagram } from "@mui/icons-material";
 import NoteIcon from '@mui/icons-material/Note';
+import { IconButton } from "@mui/material";
+import { Box } from "@mui/material";
+import { Toolbar } from "@mui/material";
 import { AppBar } from "@mui/material";
 import Card from '@mui/material/Card';
 

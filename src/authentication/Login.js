@@ -1,14 +1,16 @@
 // Note: Login Page
 import React, { useState, useContext } from 'react';
-import './Utilities.css';
-import Card from '@mui/material/Card';
-import { CardContent, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import { AuthContext } from './AuthContext';
-import TextField from '@mui/material/TextField';
-import { IconButton } from '@mui/material';
+
+import 'utilities/Utilities.css';
 import LoginIcon from '@mui/icons-material/Login';
+import { CardContent, Typography } from "@mui/material";
+import { IconButton } from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import TextField from '@mui/material/TextField';
+import { AuthContext } from 'context/AuthContext';
+
 
 
 function Login() {

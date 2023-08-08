@@ -1,11 +1,17 @@
 import React from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
+
+import { ThemeProvider } from '@mui/material';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
-import draculaTheme from './styles/Theme';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider } from '@mui/material';
+import draculaTheme from './styles/Theme';
+
+
+
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

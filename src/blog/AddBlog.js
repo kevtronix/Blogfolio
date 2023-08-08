@@ -1,9 +1,10 @@
-
 import { useState } from 'react';
-import { Box, Grid, Card, CardContent, Typography, TextField, IconButton } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-import axiosConfig from './axiosConfig';
 import { useNavigate } from 'react-router-dom';
+
+import AddIcon from '@mui/icons-material/Add';
+import { Box, Grid, Card, CardContent, Typography, TextField, IconButton } from '@mui/material';
+import axiosConfig from 'utilities/AxiosConfig';
+
 
 function AddBlog() {
     const [title, setTitle] = useState('');

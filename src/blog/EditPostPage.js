@@ -1,15 +1,17 @@
 
 import { useState, useContext, useEffect } from 'react';
-import { BlogContext } from './BlogContext';
-import axiosConfig from './axiosConfig';
+import { useNavigate } from 'react-router-dom';
+
 import {
     Box, Card,
     CardContent, Grid, 
     TextField, Typography
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import ErrorMessage from './ErrorMessage';
 import Button from '@mui/material/Button';
+import { BlogContext } from 'context/BlogContext';
+import axiosConfig from 'utilities/AxiosConfig';
+import ErrorMessage from 'utilities/ErrorMessage';
+
 
 
 function EditPostPage() {

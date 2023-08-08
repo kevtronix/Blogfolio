@@ -1,17 +1,16 @@
 import React, { useContext, useEffect } from 'react';
-import { BlogContext } from './BlogContext';
-import { AuthContext } from './AuthContext';
-import './Utilities.css';
-import Card from '@mui/material/Card';
-import { CardContent, Typography } from "@mui/material";
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import ErrorMessage from './ErrorMessage';
+import 'utilities/Utilities.css'
 import { useNavigate } from 'react-router-dom';
+
+import { CardContent, Typography } from "@mui/material";
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { NewlineText } from './NewlineText';
-
-
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import { AuthContext } from 'context/AuthContext';
+import { BlogContext } from 'context/BlogContext';
+import ErrorMessage from 'utilities/ErrorMessage';
+import { NewlineText } from 'utilities/NewlineText';
 
 function BlogPost() {
     const { post, retrievePost } = useContext(BlogContext);

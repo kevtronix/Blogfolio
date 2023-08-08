@@ -1,5 +1,5 @@
 .set-bg-image {
-    background-image: url('./images/gaming_background.png');
+    background-image: url('images/gaming_background.png');
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -15,21 +15,21 @@
 }
 
 .home-page {
-    background-image: url("./images/pixel_art_home_background.png"); 
+    background-image: url("images/pixel_art_home_background.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .about-page {
-    background-image: url("./images/pixel_art_about_background.png"); 
+    background-image: url("images/pixel_art_about_background.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .projects-page {
-    background-image: url("./images/pixel_art_projects_background.png"); 
+    background-image: url("images/pixel_art_projects_background.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -37,14 +37,14 @@
 
 
 .blog-page {
-    background-image: url("./images/blog_background.png"); 
+    background-image: url("images/blog_background.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .error-page {
-    background-image: url("./images/error_page.png"); 
+    background-image: url("images/error_page.png"); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -1,10 +1,8 @@
-// Desc: This is the top navigation bar for the application
+import { useNavigate } from "react-router-dom";
 
 import { AppBar, Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Button } from "@mui/material";
-
-import { useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material";
 
 
