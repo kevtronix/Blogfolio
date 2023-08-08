@@ -4,6 +4,7 @@ import 'utilities/Utilities.css';
 
 import { useState, useEffect } from 'react';
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import LinkIcon from '@mui/icons-material/Link';
 import {
@@ -21,22 +22,29 @@ import AddItemButton from 'utilities/AddItemButton';
 import axiosConfig from 'utilities/AxiosConfig';
 import DeleteButton from 'utilities/DeleteButton';
 import ErrorMessage from 'utilities/ErrorMessage';
+import RetroLoadingMessage from 'utilities/RetroLoading';
 
 function Projects() {
     const [projects, setProjects] = useState([]);
     const { token } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+
 
 
     useEffect(() => {
         axiosConfig.get('/projects')
             .then((response) => {
                 setProjects(response.data);
+                setLoading(false);
             })
             .catch((error) => {
                 console.log(error);
+                setProjects(null);
+                setLoading(false);
             })
     }, []);
-
+    
     return (
         <Box
             className='projects-page'
@@ -46,6 +54,9 @@ function Projects() {
                 type="project"
                 url='/projects/add' /> : null
             }
+
+            {loading ?
+                <RetroLoadingMessage message="Loading Projects" /> : null}
 
             {projects ?
 
@@ -133,17 +144,22 @@ function Projects() {
                                         </Grid>
                                         <Grid item xs={6} textAlign={"right"}>
                                             <IconButton
+                                                onClick = {() => {
+                                                    navigate(project.link);
+                                                }}
                                             >
                                                 <LinkIcon />
                                             </IconButton>
                                         </Grid>
                                     </Grid>
-                                    {token ? <DeleteButton url='projects' id = {project.id}/> : null } 
+                                    {token ? <DeleteButton url='projects' id={project.id} /> : null}
                                 </CardContent>
                             </Card>
                         </Grid>
                     ))}
-                </Grid> : ErrorMessage("Error loading projects.")}
+                </Grid> : null}
+
+            {!loading && !projects ? <ErrorMessage message="Error loading projects" /> : null}
         </Box>
     )
 }

@@ -15,6 +15,7 @@ import axiosConfig from 'utilities/AxiosConfig';
 import 'utilities/Utilities.css';
 import DeleteButton from 'utilities/DeleteButton';
 import ErrorMessage from 'utilities/ErrorMessage';
+import RetroLoadingMessage from 'utilities/RetroLoading';
 
 
 function Blog() {
@@ -22,17 +23,20 @@ function Blog() {
     const [posts, setPosts] = useState([]);
     const { setPost } = useContext(BlogContext);
     const { token } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-
+    
     useEffect(() => {
         axiosConfig.get('/blogs')
             .then(res => {
                 console.log(res);
                 setPosts(res.data);
+                setLoading(false);
             })
             .catch(err => {
                 console.log(err);
                 setPosts(null);
+                setLoading(false);
             })
     }, [])
 
@@ -46,6 +50,8 @@ function Blog() {
                 type="post"
                 url='/blog/add' /> : null
             }
+
+            {loading ? <RetroLoadingMessage message="Loading Posts" /> : null}
 
             {posts ?
                 <Grid
@@ -84,7 +90,6 @@ function Blog() {
                                             <Grid
                                                 item
                                                 xs={12}
-
                                             >
                                                 <Typography
                                                     variant="h5"
@@ -92,8 +97,8 @@ function Blog() {
                                                 >
                                                     {post.snippet}... <IconButton
                                                         size="large"
-                                                        edge="start"
-                                                        color="inherit"
+                                                        console.log(error);
+                setProjects(null                  color="inherit"
                                                         aria-label="Read More"
                                                         onClick={
                                                             () => {
@@ -113,7 +118,8 @@ function Blog() {
                             </Grid>
                         ))
                     }
-                </Grid> : <ErrorMessage message="Oops! Something went wrong!" />}
+                </Grid> : null}
+            {!loading && !posts ? <ErrorMessage message="Oops! Something went wrong!" /> : null}
         </Box >
     )
 }
